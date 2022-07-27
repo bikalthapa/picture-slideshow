@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise</title>
+</head>
+<body onload="abc()">
+    <h1>Picture Cards</h1>
+    <div class="main">
+        <div class="mySlides">
+            <img src="pink_butterfly.jpg" alt="">
+                <h3>Pink Butterfly</h3>
+            </img>
+        </div>
+        <div class="mySlides">
+            <img src="white_tigers.jpg">
+            <h3>White Tiger</h3>
+            </div>
+        <div class="mySlides">
+            <img src="rainbow_flowers.jpg">
+            <h3>Rainbow Flowers</h3>
+            </div>
+        <div class="mySlides">
+            <img src="wolf.jpg">
+            <h3>Wolf</h3>
+            </div>
+        <div class="mySlides">
+            <img src="waterfall.jpg">
+            <h3>Waterfall</h3>
+            </div>
+        <div class="mySlides">
+            <img src="pattern.jpg">
+            <h3>Ink Pattern</h3>
+            </div>
+        <div class="mySlides">
+            <img src="moraine_lake.jpg">
+            <h3>Moraine Lake</h3>
+            </div>
+        <div class="mySlides">
+            <img src="landscape.jpg">
+            <h3>Landscape</h3>
+            </div>
+        <div class="mySlides">
+            <img src="peace.jpg">
+            <h3>Peace</h3>
+            </div>
+        <div class="mySlides">
+        <img src="blue_waterfall.jpg">
+        <h3>Beautiful WaterFall</h3>
+        </div>
+        <div class="mySlides">
+        <img src="bluelove.jpg">
+        <h3>Love</h3>
+        </div>
+        <div class="mySlides">
+        <img src="fish.jpg">
+        <h3>Fish</h3>
+        </div>
+        <div class="mySlides">
+        <img src="love_ludo.jpg">
+        <h3>Ludo</h3>
+        </div>
+    </div>
+    <style>
+        .mySlides{
+            display:none;
+            position:absolute;
+            height:400px;
+            width:250px;
+            overflow:hidden;
+        }
+        body{
+            text-align:center;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color:rgb(180, 252, 228);
+        }
+        h1, h3{
+            color:blue;
+            text-shadow:2px 2px 5px;
+        }
+        h3{
+            margin-top:370px;
+        }
+        img{
+            height:350px;
+            width:250px;
+            border-radius:5px;
+            position:absolute;
+            left:0px;
+            margin:auto;
+            transition:ease;
+            box-shadow:5px 5px 10px;
+        }
+        .main{
+            background-color:rgb(173, 232, 240);
+            width:250px;
+            height:400px;
+            overflow:hidden;
+            box-shadow:10px 10px 20px;
+            margin:auto;
+            padding:10px;
+            padding-top:15px;
+            border-radius:6px;
+            border-style:solid;
+            border-right:none;
+            border-bottom:none;
+            color:blue;
+            text-shadow:2px 2px 2px rgb(48, 48, 223);
+        }
+    </style>
+    <script>
+        let slideIndex = 0;
+        function abc(){
+            let slides = document.getElementsByClassName("mySlides");
+            let i;
+            for(i=0; i<slides.length; i++){
+                slides[i].style.display = "none";
+            };
+            slideIndex++;
+            if(slideIndex > slides.length){slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(abc,5000);
+        }
+    </script>
+</body>
+</html>
